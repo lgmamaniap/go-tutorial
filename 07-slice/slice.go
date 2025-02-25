@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
 	// slice
@@ -27,4 +30,8 @@ func main() {
 
 	months = append(months, "April")
 	fmt.Printf("Len: %d, Cap: %d, p: %p\n", len(months), cap(months), months)
+
+	testData := []string{"a", "b", "c", "d", "e"}
+	fmt.Println(slices.Contains(testData, "a"))
+	fmt.Println(slices.Contains(testData, "z"))
 }
