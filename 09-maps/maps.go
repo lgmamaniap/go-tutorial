@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type Student struct {
+	Name string
+	Age  int
+	Dni  string
+}
+
 func main() {
 	days := make(map[int]string)
 
@@ -32,4 +38,11 @@ func main() {
 
 	fmt.Println(students["Gus"][1])
 
+	// Map of Students
+	studentsMap := make(map[string]Student)
+	fmt.Println(studentsMap)
+
+	studentsMap["Gus"] = Student{"Gus", 25, "123456"}
+	studentsMap["Tavo"] = Student{"Tavo", 30, "654321"}
+	fmt.Println(studentsMap)
 }
